@@ -52,8 +52,8 @@ while True:
                 print('mp3 long:'+convert_time(seconds))
                 if not os.path.isfile(path+'/night/'+night_files[night_ran]+'.ass'):
                     ass_maker.make_ass('../night/'+night_files[night_ran].replace('.mp3',''),'当前是晚间专属时间哦~时间范围：晚上22点-凌晨5点\\N大家晚安哦~做个好梦~\\N当前文件名：'+night_files[night_ran],path)
-                print('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/night/'+night_files[night_ran]+'" -vf ass="'+path+'/night/'+night_files[night_ran]+'.ass" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v h264_omx -f flv "'+rtmp+live_code+'"')
-                os.system('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/night/'+night_files[night_ran]+'" -vf ass="'+path+'/night/'+night_files[night_ran].replace('.mp3','')+'.ass" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v h264_omx -f flv "'+rtmp+live_code+'"')
+                print('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/night/'+night_files[night_ran]+'" -vf ass="'+path+'/night/'+night_files[night_ran]+'.ass" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v libx264 -f flv "'+rtmp+live_code+'"')
+                os.system('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/night/'+night_files[night_ran]+'" -vf ass="'+path+'/night/'+night_files[night_ran].replace('.mp3','')+'.ass" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v libx264 -f flv "'+rtmp+live_code+'"')
             continue
         
         files = os.listdir(path+'/downloads')   #获取文件夹下全部文件
@@ -80,8 +80,8 @@ while True:
                     pic_files.sort()    #排序数组
                     pic_ran = random.randint(0,len(pic_files)-1)    #随机选一张图片
                     #推流
-                    print('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/downloads/'+f+'" -vf ass="'+path+"/downloads/"+f.replace(".mp3",'')+'.ass'+'" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v h264_omx -f flv "'+rtmp+live_code+'"')
-                    os.system('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/downloads/'+f+'" -vf ass="'+path+"/downloads/"+f.replace(".mp3",'')+'.ass'+'" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v h264_omx -f flv "'+rtmp+live_code+'"')
+                    print('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/downloads/'+f+'" -vf ass="'+path+"/downloads/"+f.replace(".mp3",'')+'.ass'+'" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v libx264 -f flv "'+rtmp+live_code+'"')
+                    os.system('ffmpeg -threads 0 -re -loop 1 -r 2 -t '+str(int(seconds))+' -f image2 -i "'+path+'/default_pic/'+pic_files[pic_ran]+'" -i "'+path+'/downloads/'+f+'" -vf ass="'+path+"/downloads/"+f.replace(".mp3",'')+'.ass'+'" -pix_fmt yuv420p -preset ultrafast -maxrate '+var_set.maxbitrate+'k -acodec copy -c:v libx264 -f flv "'+rtmp+live_code+'"')
                     try:    #放完后删除mp3文件、删除字幕、删除点播信息
                         shutil.move(path+'/downloads/'+f,path+'/default_mp3/')
                         shutil.move(path+'/downloads/'+f.replace(".mp3",'')+'.ass',path+'/default_mp3/')
