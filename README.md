@@ -1,6 +1,6 @@
 # 24h-raspberry-live-on-bilibili-for-vps
 基于晨旭的树莓派驱动的b站直播弹幕点播台修改而来
-[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
+-[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
 -------
 
 本项目基本编写完毕，已经有的功能为：
