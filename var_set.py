@@ -2,7 +2,7 @@
 
 #需要修改的值
 
-path = '/root/24h-raspberry-live-on-bilibili-for-vps'
+path = '/root/24h-live-on-bilibili-for-vps'
 #本文件的路径，请修改
 
 roomid = '16703'
