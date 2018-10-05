@@ -44,10 +44,10 @@
 
 ### 安装依赖：
 
+更新系统：
 ```Bash
 sudo apt update
 sudo apt dist-upgrade -y
-sudo apt install -y ffmpeg x264 x265 libx264* libx265*
 ```
 
 libmp3lame：
@@ -66,6 +66,12 @@ libvpx:
 
 ```Bash
 sudo apt install libvpx-dev -y
+```
+
+ffmpeg等：
+
+```Bash
+sudo apt install -y ffmpeg x264 x265 libx264* libx265*
 ```
 
 安装python3的mutagen库：
