@@ -2,7 +2,7 @@
 
 基于晨旭的树莓派驱动的b站直播弹幕点播台修改而来
 
-[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
+[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili)
 
 非常感谢大佬的点播台，但是原来的是基于树莓派的，我做了小小的修改，以支持VPS（当然还是有点儿小问题）
 -------
@@ -30,9 +30,10 @@
 已知问题：
 
 - 换歌、视频时会闪断
-- 不支持弹幕命令【温度】内的CPU温度，其余正常（这是）
 
 ### 以上是原来的简介
+
+- 新：不支持弹幕命令【温度】内的CPU温度，其余正常
 
 ## 使用方法：
 
@@ -41,7 +42,7 @@
 不过应该都是可以的，而且许多人用的都是16.04，升级到18.04也很简单
 
 
-### 一：
+### 安装依赖：
 
 ```Bash
 sudo apt update
