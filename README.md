@@ -119,8 +119,6 @@ fc-list :lang=zh-cn
 
 （字体安装来自[ubuntu下 bilibili直播推流 ffmpeg rtmp推送](https://ppx.ink/2.ppx)）
 
-### 烹饪&摆盘：
-
 下载本项目：
 
 ```Bash
