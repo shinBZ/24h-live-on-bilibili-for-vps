@@ -1,25 +1,6 @@
-# 24h-raspberry-live-on-bilibili
-
-树莓派驱动的b站直播点播台
-
-demo:[http://live.bilibili.com/16703](http://live.bilibili.com/16703)
-
-![](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili/raw/master/demo.jpg)
-
-注意这个是新项目，查看旧版的代码请打开“old”分支查看（旧版为网页点歌版）
-
-本项目有两个链接：
-
-GitHub：[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
-
-git.osc：[https://gitee.com/Young_For_You/24h-raspberry-live-on-bilibili.git](https://gitee.com/Young_For_You/24h-raspberry-live-on-bilibili.git)
-
-----
-
-### 同时也可以去用smilecc大佬重构的版本：
-
-[blive-raspberry（https://github.com/smilecc/blive-raspberry）](https://github.com/smilecc/blive-raspberry)
-
+# 24h-raspberry-live-on-bilibili-for-vps
+基于晨旭的树莓派驱动的b站直播弹幕点播台修改而来
+[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
 -------
 
 本项目基本编写完毕，已经有的功能为：
