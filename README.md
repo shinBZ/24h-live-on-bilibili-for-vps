@@ -1,7 +1,10 @@
 # 24h-raspberry-live-on-bilibili-for-vps
+
 基于晨旭的树莓派驱动的b站直播弹幕点播台修改而来
--[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
+
+[https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
 -------
+### 以下是原来的简介
 
 本项目基本编写完毕，已经有的功能为：
 
@@ -26,6 +29,7 @@
 
 - 换歌、视频时会闪断
 
+### 以上是原来的简介
 ## 食用方法：
 
 我这里用的是树莓派3B，系统2017-09-07-raspbian-stretch.img，官方默认软件源，其他配置请自测
