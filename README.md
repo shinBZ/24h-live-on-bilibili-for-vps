@@ -3,6 +3,8 @@
 基于晨旭的树莓派驱动的b站直播弹幕点播台修改而来
 
 [https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git](https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git)
+
+非常感谢大佬的点播台，但是原来的是基于树莓派的，我做了小小的修改，以支持VPS（当然还是有点儿小问题）
 -------
 ### 以下是原来的简介
 
@@ -28,62 +30,42 @@
 已知问题：
 
 - 换歌、视频时会闪断
+- 不支持弹幕命令【温度】内的CPU温度，其余正常（这是）
 
 ### 以上是原来的简介
-## 食用方法：
 
-我这里用的是树莓派3B，系统2017-09-07-raspbian-stretch.img，官方默认软件源，其他配置请自测
+## 使用方法：
 
-### 先准备餐具：
+我这里用的是Ubuntu18.04，其他系统请自测
 
-```Bash
-sudo apt-get update
-sudo apt-get -y install autoconf automake build-essential libass-dev libfreetype6-dev libtheora-dev libtool libvorbis-dev pkg-config texinfo wget zlib1g-dev
-```
+不过应该都是可以的，而且许多人用的都是16.04，升级到18.04也很简单
 
-安装x264编码器（时间较长）：
+
+### 一：
 
 ```Bash
-git clone git://git.videolan.org/x264
-cd x264
-./configure --host=arm-unknown-linux-gnueabi --enable-static --disable-opencl
-make
-sudo make install
-cd ..
-rm -rf x264
+sudo apt update
+sudo apt dist-upgrade -y
+sudo apt install -y ffmpeg x264 x265 libx264* libx265*
 ```
 
 libmp3lame：
 
 ```Bash
-sudo apt-get install libmp3lame-dev
+sudo apt install libmp3lame-dev -y
 ```
 
 libopus:
 
 ```Bash
-sudo apt-get install libopus-dev
+sudo apt install libopus-dev -y
 ```
 
 libvpx:
 
 ```Bash
-sudo apt-get install libvpx-dev
+sudo apt install libvpx-dev -y
 ```
-
-编译并安装ffmpeg（时间较长，半小时左右）：
-
-```Bash
-wget http://ffmpeg.org/releases/ffmpeg-3.3.2.tar.bz2
-tar jxvf ffmpeg-3.3.2.tar.bz2
-cd ffmpeg-3.3.2
-sudo ./configure --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree --enable-libass --enable-libfreetype  --enable-omx --enable-omx-rpi --enable-encoder=h264_omx --enable-mmal --enable-hwaccel=h264_mmal --enable-decoder=h264_mmal
-make -j4
-sudo make install
-cd ..
-```
-
-（以上有一部分代码参考自[ffmpeg源码编译安装（Compile ffmpeg with source）  Part 2 ： 扩展安装 - 人脑之战 - 博客园](http://www.cnblogs.com/yaoz/p/6944942.html)）
 
 安装python3的mutagen库：
 
@@ -112,7 +94,7 @@ sudo pip3 install aiohttp
 安装screen:
 
 ```Bash
-sudo apt-get install screen
+sudo apt install screen -y
 ```
 
 安装中文字体
@@ -130,34 +112,12 @@ fc-list :lang=zh-cn
 
 （字体安装来自[ubuntu下 bilibili直播推流 ffmpeg rtmp推送](https://ppx.ink/2.ppx)）
 
-### 设置显存
-
-打开树莓派设置：
-
-```Bash
-sudo raspi-config
-```
-
-选择`Advanced Options`，回车
-
-选择`Memory Split`，回车
-
-把数值改成`256`
-
-回车，接着退出设置，重启树莓派
-
 ### 烹饪&摆盘：
 
 下载本项目：
 
 ```Bash
-git clone https://github.com/chenxuuu/24h-raspberry-live-on-bilibili.git
-```
-
-或
-
-```Bash
-git clone https://gitee.com/Young_For_You/24h-raspberry-live-on-bilibili.git
+git clone https://github.com/shinBZ/24h-raspberry-live-on-bilibili-for-vps.git
 ```
 
 请修改下载里的`var_set.py`文件中的各种变量
@@ -186,6 +146,6 @@ screen python3 bilibiliClient.py
 #感谢弹幕姬python版作者的分享
 ```
 
-如有不对的地方，请提交issue，也欢迎各位改进脚本并pr
-
 本程序协议为GPL
+
+本README基于原来的修改而来
