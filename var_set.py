@@ -2,7 +2,7 @@
 
 #需要修改的值
 
-path = '/home/pi/live'
+path = '/root/24h-raspberry-live-on-bilibili-for-vps'
 #本文件的路径，请修改
 
 roomid = '16703'
@@ -23,7 +23,7 @@ live_code = ''
 free_space=15360
 #允许download/default_mp3文件夹占用空间大小，超过时自动按时间顺序删除视频/音乐，单位：MiB
 
-maxbitrate='3000'
+maxbitrate='2000'
 #允许的最大码率，单位k，字符串类型，切勿改成数值型
 
 dm_size=20
