@@ -1,4 +1,4 @@
-# 24h-raspberry-live-on-bilibili-for-vps
+# 24h-live-on-bilibili-for-vps
 
 基于晨旭的树莓派驱动的b站直播弹幕点播台修改而来
 
@@ -118,7 +118,7 @@ fc-list :lang=zh-cn
 下载本项目：
 
 ```Bash
-git clone https://github.com/shinBZ/24h-raspberry-live-on-bilibili-for-vps.git
+git clone https://github.com/shinBZ/24h-live-on-bilibili-for-vps.git
 ```
 
 请修改下载里的`var_set.py`文件中的各种变量
